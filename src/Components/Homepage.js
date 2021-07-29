@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Search from "./Search";
 import CardList from "./CardList";
+import { useHistory } from "react-router-dom";
 
 function Homepage(props) {
+  let history = useHistory();
+
+  useEffect(() => {
+    let savedMovie = localStorage.getItem("favorite");
+
+    if (savedMovie) {
+      history.push(`/Movies/${savedMovie}`);
+    }
+  }, [history]);
+
   return (
     <div className="container text-center">
       <div className="row">

@@ -9,7 +9,9 @@ export const Provider = (props) => {
 
   function handleSearch(input) {
     axios
-      .get(`https://imdb-api.com/en/API/SearchSeries/${config.imdbAPIkey}/${input}`)
+      .get(
+        `https://imdb-api.com/en/API/SearchSeries/${config.imdbAPIkey}/${input}`
+      )
       .then((res) => {
         setMovies(res.data.results);
       })
