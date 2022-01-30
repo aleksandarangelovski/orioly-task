@@ -1,3 +1,3 @@
 export const config = {
-  imdbAPIkey: "k_iqyt5wrj",
+  imdbAPIkey: "k_rslkc9j0",
 };
